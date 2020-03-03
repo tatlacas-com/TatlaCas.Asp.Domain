@@ -1,15 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.1" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\TatlaCas.Asp.Utils\TatlaCas.Asp.Utils.csproj" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
+      <PackageReference Include="TatlaCas.AspCore.Utils" Version="1.0.1" />
     </ItemGroup>
 
 </Project>
