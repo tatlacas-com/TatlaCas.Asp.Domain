@@ -1,4 +1,4 @@
-namespace TatlaCas.Asp.Domain.Utils
+namespace TatlaCas.Asp.Domain
 {
     public enum OrderBy
     {

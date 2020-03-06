@@ -9,11 +9,11 @@
     <Owners>TatlaCas</Owners>
     <Title>Asp.Net Core Domain</Title>
     <IsPackable>true</IsPackable>
+    <PackageVersion>1.0.2</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
-      <PackageReference Include="TatlaCas.AspCore.Utils" Version="1.0.1" />
     </ItemGroup>
 
 </Project>

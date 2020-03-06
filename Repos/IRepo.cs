@@ -4,7 +4,6 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using TatlaCas.Asp.Domain.Models.Common;
 using TatlaCas.Asp.Domain.Resources;
-using TatlaCas.Asp.Domain.Utils;
 
 namespace TatlaCas.Asp.Domain.Repos
 {
