@@ -1,5 +1,8 @@
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace TatlaCas.Asp.Domain.Models.Common
 {
@@ -14,12 +17,23 @@ namespace TatlaCas.Asp.Domain.Models.Common
         [Key] public virtual int Id { get; set; }
     }
 
-    public abstract class PersistableEntity : BaseEntity, IPersistableEntity
+    public abstract class PersistableEntity<T> : BaseEntity, IPersistableEntity where T : class, IEntity
     {
-        public virtual void OnModelCreating(ModelBuilder builder)
+        public void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity(GetType()).HasKey("Id");
-            builder.Entity(GetType()).Property("Id").IsRequired().ValueGeneratedOnAdd();
+            var pi = GetType().GetProperty(nameof(Id));
+            if (pi != null && !Attribute.IsDefined(pi, typeof(NotMappedAttribute)))
+            {
+                var x = builder.Entity<T>();
+                x.HasKey(p => p.Id);
+                x.Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            }
+
+            OnModelCreating(builder.Entity<T>());
+        }
+
+        public virtual void OnModelCreating(EntityTypeBuilder<T> builder)
+        {
         }
     }
 }
