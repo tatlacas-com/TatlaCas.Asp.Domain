@@ -1,8 +1,8 @@
 namespace TatlaCas.Asp.Domain.Resources
 {
-    public class ResourceOption:IResourceOption
+    public class ResourceOption : IResourceOption
     {
-        public ResourceOption(string fieldId,string displayValue)
+        public ResourceOption(string fieldId, string displayValue)
         {
             FieldId = fieldId;
             DisplayValue = displayValue;
