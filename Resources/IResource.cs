@@ -10,5 +10,6 @@ namespace TatlaCas.Asp.Domain.Resources
         Dictionary<string, List<IResourceOption>> Options { get; set; }
         bool AddAnotherAfterSave { get; set; }
         bool ShowAddAnotherAfterSave { get; set; }
+        bool IsValid();
     }
 }
