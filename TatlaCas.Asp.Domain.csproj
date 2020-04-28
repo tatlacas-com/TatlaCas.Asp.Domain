@@ -8,7 +8,7 @@
     <Owners>TatlaCas</Owners>
     <Title>Asp.Net Core Domain</Title>
     <IsPackable>true</IsPackable>
-    <PackageVersion>2.0.6</PackageVersion>
+    <PackageVersion>2.0.7</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
