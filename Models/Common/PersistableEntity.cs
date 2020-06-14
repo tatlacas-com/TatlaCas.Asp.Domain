@@ -8,13 +8,13 @@ namespace TatlaCas.Asp.Domain.Models.Common
 {
     public interface IEntity
     {
-        int Id { get; set; }
+        Guid Id { get; set; }
     }
 
 
     public abstract class BaseEntity : IEntity
     {
-        [Key] public virtual int Id { get; set; }
+        [Key] public virtual Guid Id { get; set; }
     }
 
     public abstract class PersistableEntity<T> : BaseEntity, IPersistableEntity where T : class, IEntity
