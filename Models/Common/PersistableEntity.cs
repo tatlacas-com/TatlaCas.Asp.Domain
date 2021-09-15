@@ -19,6 +19,7 @@ namespace TatlaCas.Asp.Domain.Models.Common
 
     public abstract class PersistableEntity<T> : BaseEntity, IPersistableEntity where T : class, IEntity
     {
+        public string SearchProp => null;
         public void OnModelCreating(ModelBuilder builder)
         {
             var pi = GetType().GetProperty(nameof(Id));
