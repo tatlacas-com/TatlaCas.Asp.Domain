@@ -19,6 +19,8 @@ namespace TatlaCas.Asp.Domain.Models.Common
 
     public abstract class PersistableEntity<T> : BaseEntity, IPersistableEntity where T : class, IEntity
     {
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         public string SearchProp => null;
         public void OnModelCreating(ModelBuilder builder)
         {
