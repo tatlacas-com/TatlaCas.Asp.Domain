@@ -1,8 +1,7 @@
-namespace TatlaCas.Asp.Domain
+namespace TatlaCas.Asp.Domain;
+
+public enum OrderBy
 {
-    public enum OrderBy
-    {
-        Ascending,
-        Descending
-    }
+    Ascending,
+    Descending
 }
