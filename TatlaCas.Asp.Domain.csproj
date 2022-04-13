@@ -2,19 +2,20 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-    <PackageId>TatlaCas.Asp.Core.Domain</PackageId>
-    <Authors>TatlaCas</Authors>
-    <Copyright>TatlaCas</Copyright>
-    <Owners>TatlaCas</Owners>
-    <Title>Asp.Net Core Domain</Title>
-    <IsPackable>true</IsPackable>
-    <PackageVersion>2.0.7</PackageVersion>
+        <PackageId>TatlaCas.Asp.Domain</PackageId>
+        <Authors>TatlaCas</Authors>
+        <Copyright>TatlaCas</Copyright>
+        <Owners>TatlaCas</Owners>
+        <Title>Asp.Net Core Domain</Title>
+        <RepositoryUrl>https://github.com/tatlacas-com/TatlaCas.Asp.Domain.git</RepositoryUrl>
+        <IsPackable>true</IsPackable>
+        <PackageVersion>2.0.7</PackageVersion>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <LangVersion>10</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.2"/>
     </ItemGroup>
 
 </Project>
