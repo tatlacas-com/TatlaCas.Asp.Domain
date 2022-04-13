@@ -7,12 +7,8 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
-    tags:
-     - 'v*'
   pull_request:
     branches: [ main ]
-    tags:
-     - 'v*'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -40,15 +36,11 @@ jobs:
     - name: Build Release
       run: dotnet build --configuration Release --no-restore
     
-    - name: Get version
-      id: v
-      uses: battila7/get-version-action@v2
-    
     - name: Create the package
-      run: dotnet pack  --no-restore --configuration Release --include-symbols -p:PackageVersion=${{ steps.v.outputs.version-without-v }}
+      run: dotnet pack  --no-restore --configuration Release --include-symbols
       
     - name: Add GPR Source
       run: dotnet nuget add source --username tatlacas --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/tatlacas-com/index.json"
       
     - name: Publish the package to GPR
-      run: dotnet nuget push bin/Release/*.nupkg --api-key ${{ secrets.PACKAGE_API_KEY }} --source "github"
+      run: dotnet nuget push bin/Release/*.nupkg --api-key ${{ secrets.PACKAGE_API_KEY }} --source "github" --skip-duplicate
