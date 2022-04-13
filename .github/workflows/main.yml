@@ -53,3 +53,4 @@ jobs:
       
     - name: Publish the package to GPR
       run: dotnet nuget push bin/Release/*.nupkg --api-key ${{ secrets.PACKAGE_API_KEY }} --source "github"
+          --skip-duplicate
