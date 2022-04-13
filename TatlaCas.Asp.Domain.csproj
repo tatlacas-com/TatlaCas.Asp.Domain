@@ -9,7 +9,7 @@
         <Title>Asp.Net Core Domain</Title>
         <RepositoryUrl>https://github.com/tatlacas-com/TatlaCas.Asp.Domain.git</RepositoryUrl>
         <IsPackable>true</IsPackable>
-        <PackageVersion>2.0.7</PackageVersion>
+        <PackageVersion>2.0.10</PackageVersion>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
         <LangVersion>10</LangVersion>
     </PropertyGroup>
